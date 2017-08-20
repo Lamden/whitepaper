@@ -27,3 +27,12 @@ keystore/
 test_project
 *.pyc
 .DS_Store
+
+# LaTeX
+.fls
+.fds_latexmk
+.log
+.bbl
+.aux
+.tex.bak
+.bib.bak
