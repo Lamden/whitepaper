@@ -39,6 +39,15 @@
 \section{Introduction}
 The best technology can never succeed unless it is propagated to the masses in an appropriate way. We see examples of this throughout history. Henry Ford brought the price of the automobile down so that more people could afford one which then spurred a transportation revolution. Steve Jobs and Bill Gates took the computer out of the mainframe rooms of high tech businesses and colleges and packed them into a size that could be used by consumers. We are taking the same approach with blockchain technology. By modelling our tools off of the most popular command-line interfaces, package managers, and web applications, we are abstracting the difficult portions of blockchain technology away and shaping it like modern web development. Thus, Hadron is a set of blockchain development tools and infrastructure designed to be easy and understandable to the average developer.
 
+\section{Example Workflow}
+Firstly, you will install the Hadron Wrapper tool designed for developing blockchains. You will run \texttt{hadron init} inside of a project directory and generate a chain. From there, you'll install the packages you need for your application using the Hadron Hub, or our package manager named 'flora.' Let's say you want to add a new ERC20 asset. Run \texttt{flora install erc20} inside of the project directory, and a new token will be generated. To deploy the contracts to the chain, run \texttt{hadron start}, and then \texttt{hadron deploy all}.
+
+From there, you can access the administrative dashboard if you want to graphically interact with your blockchain. You can install packages from here, add accounts, see transactions, etc. etc. much like Etherscan or another block explorer software. You will also have Remix and other smart contract development tools here as well.
+
+From this backend, you can upload new contracts that you develop to the Hadron Hub. You can also connect your chain to the Hadron Ledger to interact with other blockchain applications. To do this, you will host an IPFS node and connect to the distributed computing cluster as a server. You can then interact with other independant blockchains as a user, or to intiate chain-to-chain swaps. You can initiate swaps with the native Boson token out of the box with all blockchains.
+
+Now, you can integrate your other software on top of the blockchain such as a public facing user interface, automatic transfers between chains, smart contract interaction, and even interacting with custom contracts that you deploy on other chains on the Hadron Ledger. All is possible with the Hadron Project.
+
 \section{Motivation}
 
 In the past several years, we have seen an influx of blockchain technologies hitting the market. These technologies are touted as a means to an end of the centralized banking and financial systems. However, these blockchains rely on flawed systems that do not take into account the application of said technologies into the current infrastructure space. As a result, blockchain technology is segregated from the mainstream financial systems, and thus is ironically hindered by achieving its end goal.
