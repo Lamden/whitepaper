@@ -2,11 +2,6 @@
 	article}
 	
 \usepackage[utf8]{inputenc}
-
-\title{The Hadron Cryptographic Ledger Project: a framework for the rapid development and deployment of blockchain technologies.}
-\author{Stuart Farmer, Mario Hernandez, James Munsch}
-\date{stu@hadronledger.com, mario@hadronledger.com, james@hadronledger.com}
-
 \usepackage{url}
 \def\UrlBreaks{\do\/\do-}
 \usepackage{graphicx}
@@ -18,6 +13,8 @@
 \usepackage{listings}
 \usepackage{color}
 \usepackage{titling}
+\usepackage[T1]{fontenc}
+\usepackage{authblk}
 
 \lstset{frame=tb,
   aboveskip=6mm,
@@ -31,7 +28,11 @@
 }
 \renewcommand\lstlistingname{Algorithm}
 
-
+\title{The Hadron Cryptographic Ledger Project: a framework for the rapid development and deployment of blockchain technologies.}
+\author{Stuart Farmer\thanks{stu@hadronledger.com}}
+\author{Mario Hernandez\thanks{mario@hadronledger.com}}
+\author{James Munsch\thanks{james@hadronledger.com}}
+\affil{The Hadron Project, whitepaper version 0.1}
 
 \begin{document}
 \sloppy
@@ -179,7 +180,7 @@ Optionally deployable instances of IPFS\,/\,IPNS and Tor.
 \textbf{Deployment}
 \end{center}
 
-After the development of a private chain, an organization will want to package and deploy that in a way that can integrate into their internal technical stacks. To do this, the Hadron Wrapper will export Docker files for quick deployment. On-demand deployment and management through Kubernetes instances will be available as a service through the Hadron Project itself for turn key solutions. Proceeds from Hadron Project service offerings will go to the Hadron Foundation, outlined in the Foundation document, to support open-source development.
+After the development of a private chain, an organization will want to package and deploy that in a way that can integrate into their internal technical stacks. To do this, the Hadron Wrapper will export Docker files for quick deployment.
 
 \begin{center}
 \textbf{Architecture}
@@ -264,7 +265,7 @@ A main value add of the Hadron Ledger is the absence of transaction fees. In exc
 \textbf{Payment Channels for Cross-Chain Transactions}
 \end{center}
 
-While retaining a trustless and decentralized system, it is required for a system of cross-chain payments to exist so that blockchain applications can interact with each other freely. This is the main draw of the Hadron Ledger. To do so, the Ledger implements Lightning Network inspired payment channels to provide a secure and decentralized method of exchanging funds across blockchains. Transactions initiate from private chains, and utilize the Ledger as a public service for managing secure and guaranteed remittance of funds from chain to chain.
+While retaining a trustless and decentralized system, it is required for a system of cross-chain payments to exist so that blockchain applications can interact with each other freely. This is the main draw of the Hadron Ledger. To do so, the Ledger implements Lightning Network\,\cite{lightning} inspired payment channels to provide a secure and decentralized method of exchanging funds across blockchains. Transactions initiate from private chains, and utilize the Ledger as a public service for managing secure and guaranteed remittance of funds from chain to chain.
 
 The Ledger is a public service that distributes the work of smart contract deployment and identity verification for chain to chain transfers between participants connected to the main network. Private chains are free to implement their own methods by which to transfer funds to each other, but the public Ledger is verifiable by consensus of participants on the wider network, thus providing a stronger sense of trust to cross chain transactions.
 
