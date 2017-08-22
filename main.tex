@@ -19,6 +19,8 @@
 \usepackage{flafter}
 \usepackage{here}
 
+\usepackage[super]{natbib}
+
 \usepackage{tabularx,booktabs,ragged2e}
 \newcolumntype{C}{>{\Centering\arraybackslash}X} % centered "X" column
 
@@ -68,7 +70,7 @@ There are many fundamental flaws with the blockchain architecture that prevent i
 \textbf{Transaction Fees}
 \end{center}
 
-Firstly, let’s take a look at the problem with transaction fees from an end user standpoint. The key to success in the crypto space is mass adoption of Bitcoin in the international market. As it stands at this time of writing, the average transaction fee for a Bitcoin transaction is at around 6\%\,\cite{bitcoinfees}. Compared to centralized systems such as PayPal\,\cite{paypalfees}, Mastercard\,\cite{mastercardfees}, and Visa\,\cite{visafees}, Bitcoin is actually about twice as expensive.
+Firstly, let’s take a look at the problem with transaction fees from an end user standpoint. The key to success in the crypto space is mass adoption of Bitcoin in the international market. As it stands at this time of writing, the average transaction fee for a Bitcoin transaction is at around 6\%\cite{bitcoinfees}. Compared to centralized systems such as PayPal\cite{paypalfees}, Mastercard\cite{mastercardfees}, and Visa\cite{visafees}, Bitcoin is actually about twice as expensive.
 
 It should be noted the fundamentals of cryptocurrency are why users feel justified with this discrepancy. The decentralized nature of ownership outweighs the additional costs. However, on a macroeconomic scale, cost efficiency will outweigh fundamental allure.
 
@@ -76,7 +78,7 @@ It should be noted the fundamentals of cryptocurrency are why users feel justifi
 \textit{“But what about Ethereum? Their transaction fees are only 0.3\%!”}
 \end{center}
 	
-While this is true, the Ethereum blockchain was not designed as a transfer of value network\,\cite{ethereumwp} like Bitcoin was, but rather a smart contracts network to enable trustless and decentralized software systems. We have to remember that users instead pay for the number of operations that occur on the chain and that this number of operations continues to increase as more and more complicated smart contracts are deployed. A major selling point of Ethereum was the ability to add smart contracts as ‘libraries’ that function in the same way as frameworks in other software development stacks which is to automate operations and processes so users do not have to rewrite them over and over again. Thus, we can safely assume that over time, as more complex smart contracts are made and more libraries are integrated, the cost of interacting with the main Ethereum blockchain. This mechanism by charging developers on operations disincentivizes innovation and complex smart contract systems that Ethereum needs to be a long term success.
+While this is true, the Ethereum blockchain was not designed as a transfer of value network\cite{ethereumwp} like Bitcoin was, but rather a smart contracts network to enable trustless and decentralized software systems. We have to remember that users instead pay for the number of operations that occur on the chain and that this number of operations continues to increase as more and more complicated smart contracts are deployed. A major selling point of Ethereum was the ability to add smart contracts as ‘libraries’ that function in the same way as frameworks in other software development stacks which is to automate operations and processes so users do not have to rewrite them over and over again. Thus, we can safely assume that over time, as more complex smart contracts are made and more libraries are integrated, the cost of interacting with the main Ethereum blockchain. This mechanism by charging developers on operations disincentivizes innovation and complex smart contract systems that Ethereum needs to be a long term success.
 
 
 
@@ -87,11 +89,11 @@ While this is true, the Ethereum blockchain was not designed as a transfer of va
 \begin{tabularx}{\textwidth}{l X l}
 \toprule
 \textbf{Service Name} & \textbf{Average Transaction Cost}                                                                                         & \textbf{Paying Party} \\ \cmidrule[\heavyrulewidth]{1-3}
-Bitcoin\,\cite{bitcoinfees}			& {\small{$\sim$}}6\% (variable) & Sender \\ \midrule
-PayPal\,\cite{paypalfees}			& 2.9\% + \$0.30 & Receiver \\ \midrule
-Visa\,\cite{visafees}				& Based on merchant type. As low as 0.20\% for utility payment, to as high as 1.50\% for standard merchants. & Receiver \\ \midrule
-Mastercard\,\cite{mastercardfees}	& Based on merchant type. As low as 0.00\% + \$0.65 for utility payment, to as high as 2.95\% + \$0.10 for standard merchants. & Receiver \\ \midrule
-Stripe\,\cite{stripefees}			& 2.9\% + \$0.30 & Receiver \\ \bottomrule
+Bitcoin\cite{bitcoinfees}			& {\small{$\sim$}}6\% (variable) & Sender \\ \midrule
+PayPal\cite{paypalfees}				& 2.9\% + \$0.30 & Receiver \\ \midrule
+Visa\cite{visafees}					& Based on merchant type. As low as 0.20\% for utility payment, to as high as 1.50\% for standard merchants. & Receiver \\ \midrule
+Mastercard\cite{mastercardfees}		& Based on merchant type. As low as 0.00\% + \$0.65 for utility payment, to as high as 2.95\% + \$0.10 for standard merchants. & Receiver \\ \midrule
+Stripe\cite{stripefees}				& 2.9\% + \$0.30 & Receiver \\ \bottomrule
 \end{tabularx}%
 }\par
 \medskip
@@ -103,7 +105,7 @@ Table 1: Various payment services and their transaction costs.
 \textbf{Bloated Chains}
 \end{center}
 
-Carrying on with the Ethereum model, because the ledger is public, anyone can deploy whatever smart contracts they’d like. As a result, even though the blockchain is only two years old, the size of a full node is 242GB\,\cite{ethchainsize}, which is even larger than the current size of a Bitcoin full node which is around 152GB\,\cite{btcchainsize}. Having to install a full node, or at least a light chain which is still around 20Gb of data, is a hefty barrier of entry for someone who just wants to dabble in smart contract development.
+Carrying on with the Ethereum model, because the ledger is public, anyone can deploy whatever smart contracts they’d like. As a result, even though the blockchain is only two years old, the size of a full node is 242GB\cite{ethchainsize}, which is even larger than the current size of a Bitcoin full node which is around 152GB\cite{btcchainsize}. Having to install a full node, or at least a light chain which is still around 20Gb of data, is a hefty barrier of entry for someone who just wants to dabble in smart contract development.
 
 Compare the time it takes to fully sync a node with the time it takes to install Python, Node.js, or any other programming environment to start poking around. The inconvenience and download size alone are unfeasible to most developers and companies, let alone the average user who is curious about blockchain technology.
 
@@ -113,7 +115,7 @@ Compare the time it takes to fully sync a node with the time it takes to install
 
 Modern blockchains have a notoriously low throughput rate which causes transaction times to be slow, and a backlog of pending transactions to pile up. This is an unacceptable replacement for the current financial systems that process millions of transactions per day.
 
-For example, Bitcoin has a throughput rate of 3 transactions per second. Likewise, Ethereum boasts a mere 15 transactions per second\,\cite{transactbandwidth}. In comparison, PayPal released a case study in May of 2015 where they were able to create a system throughput rate of over a billion transactions a day. That translates to about 11,600 transactions per second\cite{paypalcasestudy}.
+For example, Bitcoin has a throughput rate of 3 transactions per second. Likewise, Ethereum boasts a mere 15 transactions per second\cite{transactbandwidth}. In comparison, PayPal released a case study in May of 2015 where they were able to create a system throughput rate of over a billion transactions a day. That translates to about 11,600 transactions per second\cite{paypalcasestudy}.
 
 This disincentivizes enterprises that deal with assets in a traditional high throughput database structure to sacrifice capacity for the benefits of high record maintenance.
 
@@ -192,7 +194,7 @@ contract RewardedAsset {
 \textbf{Generator Tool}
 \end{center}
 
-The Hadron Wrapper is taking design queues from other package management CLI (Command-Line Interface) tools such as \texttt{pip}\,\cite{pip}, \texttt{yeoman}\,\cite{yeoman}, and \texttt{npm}\,\cite{npm} to generate private blockchains as their own development projects. Generation through the CLI took is as simple as ‘\texttt{hadron init}’. Through this CLI application, you will be able to interact with the chain in a simplified API that abstracts most of the complexities of blockchain technologies from you.
+The Hadron Wrapper is taking design queues from other package management CLI (Command-Line Interface) tools such as \texttt{pip}\cite{pip}, \texttt{yeoman}\cite{yeoman}, and \texttt{npm}\cite{npm} to generate private blockchains as their own development projects. Generation through the CLI took is as simple as ‘\texttt{hadron init}’. Through this CLI application, you will be able to interact with the chain in a simplified API that abstracts most of the complexities of blockchain technologies from you.
 
 The initial blockchain technology that we are implementing is Ethereum, and so developers will be able to initialize these chains, create accounts, mine blocks, and deploy contracts in a sub-processed instance of \texttt{geth}, Ethereum’s client written in Go.
 
@@ -296,7 +298,7 @@ A main value add of the Hadron Ledger is the absence of transaction fees. In exc
 \textbf{Payment Channels for Cross-Chain Transactions}
 \end{center}
 
-While retaining a trustless and decentralized system, it is required for a system of cross-chain payments to exist so that blockchain applications can interact with each other freely. This is the main draw of the Hadron Ledger. To do so, the Ledger implements Lightning Network\,\cite{lightning} inspired payment channels to provide a secure and decentralized method of exchanging funds across blockchains. Transactions initiate from private chains, and utilize the Ledger as a public service for managing secure and guaranteed remittance of funds from chain to chain.
+While retaining a trustless and decentralized system, it is required for a system of cross-chain payments to exist so that blockchain applications can interact with each other freely. This is the main draw of the Hadron Ledger. To do so, the Ledger implements Lightning Network\cite{lightning} inspired payment channels to provide a secure and decentralized method of exchanging funds across blockchains. Transactions initiate from private chains, and utilize the Ledger as a public service for managing secure and guaranteed remittance of funds from chain to chain.
 
 The Ledger is a public service that distributes the work of smart contract deployment and identity verification for chain to chain transfers between participants connected to the main network. Private chains are free to implement their own methods by which to transfer funds to each other, but the public Ledger is verifiable by consensus of participants on the wider network, thus providing a stronger sense of trust to cross chain transactions.
 
@@ -325,25 +327,25 @@ When the computing cluster receives this payload, the cluster will compile the S
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.45]{fig1.jpg}
-\caption{\small\textnormal{Chain A initiates a swap by sending a message to the Ledger. The Ledger then takes the swap requirements and compiles them into Solidity bytecode to be deployed on each chain.}}
+\includegraphics[scale=0.112]{fig1.png}
+\caption{\small\textnormal{Alice initiates a swap by sending a message to the Ledger. The Ledger then takes the swap requirements and compiles them into Solidity bytecode to be deployed on each chain.}}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.45]{fig2.jpg}
-\caption{\small\textnormal{The bytecode is signed with each chain's public key and sent to both parties. Chain A deploys their contract. Chain B keeps a copy to verify later.}}
+\includegraphics[scale=0.112]{fig2.png}
+\caption{\small\textnormal{The bytecode is signed with each chain's public key and sent to both parties. Alice deploys their contract. Bob keeps a copy to verify later.}}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{fig3.jpg}
-\caption{\small\textnormal{The same occurs for Chain B.}}
+\includegraphics[scale=0.112]{fig3.png}
+\caption{\small\textnormal{The same occurs for Bob.}}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{fig4.jpg}
+\includegraphics[scale=0.112]{fig4.png}
 \caption{\small\textnormal{Assuming that this is an agreeable swap, both chains deploy the contract, and check to see if the other party has done the same by searching for the bytecode on the latest block. If this has not occurred, the chain does not have to follow through with any obligations, and the transaction reverts without loss of funds.}}
 \end{figure}
 
@@ -355,13 +357,13 @@ To make sure that the payments have been sent through in a timely fashion, each 
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{fig5.jpg}
-\caption{\small\textnormal{Chain A's best economic option is to submit the funds and resolve their own contract as soon as possible, because if Chain B acts before them, Chain A will lose funds. Inversely, Chain A could also profit if Chain B decided not to redeem their funds. So it is also in Chain A's best interest to resolve their contract as soon as possible}}
+\includegraphics[scale=0.112]{fig5.png}
+\caption{\small\textnormal{Alice's best economic option is to submit the funds and resolve their own contract as soon as possible, because if Bob acts before them, Alice will lose funds. Inversely, Alice could also profit if Bob decided not to redeem their funds. So it is also in Alice's best interest to resolve their contract as soon as possible}}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{fig6.jpg}
+\includegraphics[scale=0.112]{fig6.png}
 \caption{\small\textnormal{The best case scenario for both parties, therefore, is to resolve the payment channel on the opposing chain, and resolve the contract on their own chain as soon as possible. By adding economic incentive to do this, the network benefits from quick chain-to-chain transfers.}}
 \end{figure}
 
