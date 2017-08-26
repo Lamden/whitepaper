@@ -43,11 +43,11 @@
 }
 \renewcommand\lstlistingname{Algorithm}
 
-\title{The Hadron Cryptographic Ledger Project: a framework for the rapid development\\and deployment of blockchain technologies.}
+\title{The Lamden Project: a framework for the rapid development\\and deployment of blockchain technologies.}
 \author{Stuart Farmer\thanks{stu@hadronledger.com}}
 \author{Mario Hernandez\thanks{mario@hadronledger.com}}
 \author{James Munsch\thanks{james@hadronledger.com}}
-\affil{The Hadron Project, White Paper version 0.1}
+\affil{The Lamden Project, White Paper version 0.1}
 
 \begin{document}
 \sloppy
@@ -55,7 +55,7 @@
 \begin{titlingpage}
     \maketitle
     \begin{abstract}
-	Blockchain application development is unnecessarily hard, partially because of how new the technology is, but also because of certain imposed limitations on the current status quo of how blockchains are used today. In this paper, we discuss the problems with current blockchain implementations and a solution to these problems. We introduce Hadron: a software package of development tools that includes a blockchain generator, community collaboration tools, and independent chain-to-chain communication to create vast networks of blockchain applications that can transfer any asset across them.\\\\
+	Blockchain application development is unnecessarily hard, partially because of how new the technology is, but also because of certain imposed limitations on the current status quo of how blockchains are used today. In this paper, we discuss the problems with current blockchain implementations and a solution to these problems. We introduce Lamden: a software package of development tools that includes a blockchain generator, community collaboration tools, and independent chain-to-chain communication to create vast networks of blockchain applications that can transfer any asset across them.\\\\
 	{\bf Keywords:} enter, keyword, here.
     \end{abstract}
 \end{titlingpage}
@@ -64,7 +64,7 @@
 
 In the past several years, we have seen an influx of blockchain technologies hitting the market. These technologies are touted as a means to an end of the centralized banking and financial systems. However, these blockchains rely on flawed systems that do not take into account the application of said technologies into the current infrastructure space. As a result, blockchain technology is segregated from the mainstream financial systems, and thus is ironically hindered by achieving its end goal.
 
-The Hadron project is an effort to create software development tools that increase the mass adoption of blockchain technology so infrastructure can revolutionize the market systems and cause realistic innovation within the markets.
+The Lamden project is an effort to create software development tools that increase the mass adoption of blockchain technology so infrastructure can revolutionize the market systems and cause realistic innovation within the markets.
 
 Laid out in this white paper is our critiques of the current state of the markets, and how we plan on improving this space.
 
@@ -148,14 +148,14 @@ For many interested in blockchain technologies for their enterprises or business
 
 \section{The Solution}
 
-The Hadron project proposes the creation of a suite of development tools that allows rapid development and deployment of private blockchain systems that mimics the modern development process featured in such tech stacks as Node.js or Python which provide a plethora of easy to use tools, extensive and robust documentation, and vastly popular support communities.
+The Lamden project proposes the creation of a suite of development tools that allows rapid development and deployment of private blockchain systems that mimics the modern development process featured in such tech stacks as Node.js or Python which provide a plethora of easy to use tools, extensive and robust documentation, and vastly popular support communities.
 
-The project is broken up into three sections, the Hadron Wrapper, the Hadron Hub, and the Hadron Ledger, which each add a layer to end goal of providing hyperfast blockchains for developer to test, experiment, and deploy across a network of other blockchain systems.
+The project is broken up into three sections, the Lamden Wrapper, the Lamden Hub, and the Lamden Ledger, which each add a layer to end goal of providing hyperfast blockchains for developer to test, experiment, and deploy across a network of other blockchain systems.
 
-The Hadron Wrapper is the generator tool to deploy private chains on an internal network without any hassle. The Hadron Hub is a central repository for smart contract packages and templates, private chain naming services, and blockchain discovery. The Hadron Ledger is the network that handles payment channel swap processes between chains and facilitates communication between blockchain apps on the network in a way that remains trustless and decentralized.
+The Lamden Wrapper is the generator tool to deploy private chains on an internal network without any hassle. The Lamden Hub is a central repository for smart contract packages and templates, private chain naming services, and blockchain discovery. The Lamden Ledger is the network that handles payment channel swap processes between chains and facilitates communication between blockchain apps on the network in a way that remains trustless and decentralized.
 
 \begin{center}
-\textbf{The Hadron Wrapper}
+\textbf{The Lamden Wrapper}
 \end{center}
 
 Instead of having a single mainnet which suffers from the problems mentioned above, breaking up blockchains into individual use cases and having them interact with each other when needed solves many problems with low blockchain adoption rate. For example, an organization would have their own blockchain for their own web app. This allows them to have complete control over the technology that they use as well as dedicating their own computing resources to running that blockchain, rather than wasting effort on a main chain. Furthermore, ‘gas’ in the case of an Ethereum chain can be eliminated and the difficulty of a network can be turned down to a more reasonable level, thus enabling free transactions across their application. This makes a blockchain act more like a web server than a traditional chain and can then be used to replace and upgrade existing database structures internally.
@@ -164,7 +164,7 @@ Instead of having a single mainnet which suffers from the problems mentioned abo
 \textbf{Motivation for Independent Consensus}
 \end{center}
 
-What makes blockchain technology work is the fact that miners are independent actors that verify transactions that occur so it is near impossible to inject false information into the chain. However, in traditional settings, miners are rewarded in cryptocurrency from transaction fees. Because transactions are free on the Hadron protocol, a different rewarding mechanism must be instilled so that miners are still motivated to provide independent verification of transactions\cite{verifincent}.
+What makes blockchain technology work is the fact that miners are independent actors that verify transactions that occur so it is near impossible to inject false information into the chain. However, in traditional settings, miners are rewarded in cryptocurrency from transaction fees. Because transactions are free on the Lamden protocol, a different rewarding mechanism must be instilled so that miners are still motivated to provide independent verification of transactions\cite{verifincent}.
 
 It is possible to create proof-of-work, proof-of-stake, and any other rewarding schemes by using smart contracts. In this way, a smart contract can be called upon to calculate the reward and recipient, and reward any type of asset on the chain. Instead of just the native currency of the chain (which is initially Ether), ERC20 tokens or novel cryptoasset implementations can be rewarded as well, providing even more customization to private chains. And because transactions and gas is free on the networks, calling a contract one a block, for example, is not expensive.
 
@@ -200,13 +200,13 @@ contract RewardedAsset {
 \textbf{Generator Tool}
 \end{center}
 
-The Hadron Wrapper is taking design queues from other package management CLI (Command-Line Interface) tools such as \texttt{pip}\cite{pip}, \texttt{yeoman}\cite{yeoman}, and \texttt{npm}\cite{npm} to generate private blockchains as their own development projects. Generation through the CLI took is as simple as ‘\texttt{hadron init}’. Through this CLI application, you will be able to interact with the chain in a simplified API that abstracts most of the complexities of blockchain technologies from you.
+The Lamden Wrapper is taking design queues from other package management CLI (Command-Line Interface) tools such as \texttt{pip}\cite{pip}, \texttt{yeoman}\cite{yeoman}, and \texttt{npm}\cite{npm} to generate private blockchains as their own development projects. Generation through the CLI took is as simple as ‘\texttt{Lamden init}’. Through this CLI application, you will be able to interact with the chain in a simplified API that abstracts most of the complexities of blockchain technologies from you.
 
 The initial blockchain technology that we are implementing is Ethereum, and so developers will be able to initialize these chains, create accounts, mine blocks, and deploy contracts in a sub-processed instance of \texttt{geth}, Ethereum’s client written in Go.
 
-By abstracting the main interaction components away from \texttt{geth} into a CLI tool, we are able to then provide a RESTful API service for interacting with these private chains. A RESTful API allows for blockchains to be interacted with across the Internet in any programming language interface. If a programming language supports HTTP requests, they will be able to interact with Hadron generated private chains. This allows integration into any tech stack, and allows us to create drop in libraries for many modern language frameworks such as Swift for iOS development, Java for Android development, and even embedded C for Internet of Things applications.
+By abstracting the main interaction components away from \texttt{geth} into a CLI tool, we are able to then provide a RESTful API service for interacting with these private chains. A RESTful API allows for blockchains to be interacted with across the Internet in any programming language interface. If a programming language supports HTTP requests, they will be able to interact with Lamden generated private chains. This allows integration into any tech stack, and allows us to create drop in libraries for many modern language frameworks such as Swift for iOS development, Java for Android development, and even embedded C for Internet of Things applications.
 
-Furthermore, the Hadron Wrapper will provide a local server with an Ethereum blockchain explorer that can be public facing so that the wider community can monitor and see the activity occurring on the chain.
+Furthermore, the Lamden Wrapper will provide a local server with an Ethereum blockchain explorer that can be public facing so that the wider community can monitor and see the activity occurring on the chain.
 
 A web service to manage the chain from a graphical web interface similar to Parse will also be included out of the box.
 
@@ -216,27 +216,27 @@ Optionally deployable instances of IPFS\,/\,IPNS and Tor.
 \textbf{Deployment}
 \end{center}
 
-After the development of a private chain, an organization will want to package and deploy that in a way that can integrate into their internal technical stacks. To do this, the Hadron Wrapper will export Docker files for quick deployment.
+After the development of a private chain, an organization will want to package and deploy that in a way that can integrate into their internal technical stacks. To do this, the Lamden Wrapper will export Docker files for quick deployment.
 
 \begin{center}
 \textbf{Architecture}
 \end{center}
 
-Beyond creating a private chain instance, the Hadron Wrapper contains the necessary methods needed to accept payment channel transactions and interact with the larger Hadron chain. Thus, the Hadron Wrapper should be thought of as a type of interface. Each Hadron Wrapper instance must adequately conform to a set of monitoring and interaction protocols to guarantee that the chain is trustless and that transactions can be independently confirmed.
+Beyond creating a private chain instance, the Lamden Wrapper contains the necessary methods needed to accept payment channel transactions and interact with the larger Lamden chain. Thus, the Lamden Wrapper should be thought of as a type of interface. Each Lamden Wrapper instance must adequately conform to a set of monitoring and interaction protocols to guarantee that the chain is trustless and that transactions can be independently confirmed.
 
-If the Hadron Wrapper component can achieve these functionalities, then the internal blockchain driver does not have to be based off of Ethereum. Into the future, the Hadron Wrapper will support arbitrary blockchain technologies such as Bitcoin, Litecoin, Zcash, Monero, Neo, Tezos, Eos, and more as long as they can support payment channels in a trustless fashion. Even novel blockchain technologies that adhere to the wrapper protocol will be supported, creating a completely custom blockchain-to-blockchain interfacing network.
+If the Lamden Wrapper component can achieve these functionalities, then the internal blockchain driver does not have to be based off of Ethereum. Into the future, the Lamden Wrapper will support arbitrary blockchain technologies such as Bitcoin, Litecoin, Zcash, Monero, Neo, Tezos, Eos, and more as long as they can support payment channels in a trustless fashion. Even novel blockchain technologies that adhere to the wrapper protocol will be supported, creating a completely custom blockchain-to-blockchain interfacing network.
 
-The Wrapper will ultimately support any blockchain technology as long as it adheres to certain specifications so that it can interact with the Hadron Ledger. This future-proofs the Hadron system so that no matter what technologies exist in the future, there will always be a network to interact with them. This also solves the problem of blockchain migration, as businesses, enterprises, and applications can upgrade to the latest blockchain projects and technology as they come out to keep ahead of the competition.
+The Wrapper will ultimately support any blockchain technology as long as it adheres to certain specifications so that it can interact with the Lamden Ledger. This future-proofs the Lamden system so that no matter what technologies exist in the future, there will always be a network to interact with them. This also solves the problem of blockchain migration, as businesses, enterprises, and applications can upgrade to the latest blockchain projects and technology as they come out to keep ahead of the competition.
 
 \begin{center}
-\textbf{The Hadron Hub}
+\textbf{The Lamden Hub}
 \end{center}
 
 Apart from simple blockchain generation, the main driver of technology adoption is not the base use cases of the core tech, but rather the surrounding communities and feature-sets built by them. You can see this with the Ethereum community, and more with newer smart contract systems that are starting to spur innovation. Their cryptocurrency mechanisms are not what sets them apart from Bitcoin or Litecoin. Instead it is the development community surrounding and developing smart contract applications that affords wider adoption\cite{techecosystems}.
 
 Similarly, package repositories that allow users to pull in packages from the wider community, comment on them, and even develop for them solidifies a base of intellectual capital that leads to the success of the project and greater innovation in the field.
 
-The purpose of the Hadron Hub is to host a decentralized package repository, namespace system, and discovery tool so that developers of Hadron chains can connect with other developers, play off each other's innovations, and lead to a greater state of cryptocurrency.
+The purpose of the Lamden Hub is to host a decentralized package repository, namespace system, and discovery tool so that developers of Lamden chains can connect with other developers, play off each other's innovations, and lead to a greater state of cryptocurrency.
 
 \begin{center}
 \textbf{Public Package Manager}
@@ -245,7 +245,7 @@ The purpose of the Hadron Hub is to host a decentralized package repository, nam
 \begin{lstlisting}[
 	aboveskip=1mm,
 	belowskip=1mm,
-	title={\small\textnormal{Listing 2: Example of a Solidity Template for ERC20 tokens with corresponding JSON input. Installation of such contract could be accomplished via ‘\texttt{hpm install erc20 --args}’, or from the Hadron Wrapper administration panel.}},
+	title={\small\textnormal{Listing 2: Example of a Solidity Template for ERC20 tokens with corresponding JSON input. Installation of such contract could be accomplished via ‘\texttt{hpm install erc20 --args}’, or from the Lamden Wrapper administration panel.}},
 	captionpos=b]
 pragma solidity ^{{solidity_version}};
 
@@ -272,7 +272,7 @@ contract {{contract_name}} {
 }
 \end{lstlisting}
 
-Like other development suites, Hadron has the ability to create smart contract packages. Using a macro templating system, we are able to abstract common Solidity contract types such as ERC20 tokens, Ethereum Name Services, and the Etherdelta decentralized exchange, package them up into contracts that only take a set of arguments, and allow deployment across private chains in as simple as a manner of running ‘\texttt{hpm install ens}’ from a CLI console, or sending an API request to do the same through the administrative dashboard included in the Hadron Wrapper. This takes the headaches out of redeploying commonly used smart contracts, and allows the packaging of highly complex smart applications for quick distribution.
+Like other development suites, Lamden has the ability to create smart contract packages. Using a macro templating system, we are able to abstract common Solidity contract types such as ERC20 tokens, Ethereum Name Services, and the Etherdelta decentralized exchange, package them up into contracts that only take a set of arguments, and allow deployment across private chains in as simple as a manner of running ‘\texttt{hpm install ens}’ from a CLI console, or sending an API request to do the same through the administrative dashboard included in the Lamden Wrapper. This takes the headaches out of redeploying commonly used smart contracts, and allows the packaging of highly complex smart applications for quick distribution.
 
 As more blockchains are added to the Wrapper, support for their contract languages will be added to the Hub as well. Developers can upload their own contracts to support the community. Interaction with the Hub will be over the Interplanetary File System (IPFS) so that all services remain distributed and decentralized.
 
@@ -282,33 +282,33 @@ As more blockchains are added to the Wrapper, support for their contract languag
 
 Chains will have to communicate with one another to execute payment channels. To do this, a naming service must be implemented. This naming service assigns a common name and a key pair to each chain so that other chains can discover them and sign transaction requests to them.
 
-Furthermore, users will be able to search and discover new blockchain applications. These are private chains developed with the Hadron Wrapper that have connected to the Hadron Ledger. Each of these chains will be able to register for a name and fill out a profile about their service which can include links to marketing sites, connection information for miners, and anything else that would lead users to more valuable information about their service. That name will be used to locate and send information to through the Hadron Ledger for payment transactions, interaction with the chains, and the general use of the native Hadron token.
+Furthermore, users will be able to search and discover new blockchain applications. These are private chains developed with the Lamden Wrapper that have connected to the Lamden Ledger. Each of these chains will be able to register for a name and fill out a profile about their service which can include links to marketing sites, connection information for miners, and anything else that would lead users to more valuable information about their service. That name will be used to locate and send information to through the Lamden Ledger for payment transactions, interaction with the chains, and the general use of the native Lamden token.
 
 We have also been exploring options in using the Token for other developers to be able to register their modules to which usage metrics could generate token liquidity between members of the developer community.
 
 \begin{center}
-\textbf{The Hadron Ledger}
+\textbf{The Lamden Ledger}
 \end{center}
 
-The main technological feat of the Hadron project is its cryptographic ledger and routing system that connects private chains together. By instead of recreating an entirely new chain and instead shifting focus towards distributed private chains only tied together by a routing infrastructure, we can avoid blockchain bloat, the need to ‘sync’ with the network before interacting with it, increasing transaction costs, and guarantee a future-proof platform that will last years regardless of the further improvements upon general blockchain technology.
+The main technological feat of the Lamden project is its cryptographic ledger and routing system that connects private chains together. By instead of recreating an entirely new chain and instead shifting focus towards distributed private chains only tied together by a routing infrastructure, we can avoid blockchain bloat, the need to ‘sync’ with the network before interacting with it, increasing transaction costs, and guarantee a future-proof platform that will last years regardless of the further improvements upon general blockchain technology.
 
 \begin{center}
 \textbf{Routing}
 \end{center}
 
-The Hadron Ledger is primarily the infrastructure that links private chains together over a common protocol, much like a telephone network. The Ledger takes care of interaction between all chains and provides a common set of interface options to that chains can be treated the same ways in computer programming environments and platforms for further integration away from the Hadron Hub.
+The Lamden Ledger is primarily the infrastructure that links private chains together over a common protocol, much like a telephone network. The Ledger takes care of interaction between all chains and provides a common set of interface options to that chains can be treated the same ways in computer programming environments and platforms for further integration away from the Lamden Hub.
 
-A main value add of the Hadron Ledger is the absence of transaction fees. In exchange for the benefits of connection to the Hadron Hub and exposing a private chain to the wider community which increases public adoption, a private chain dedicates a certain amount of computing power to the ledger overall. Because the ledger is absent of difficult hashing functions, and serves merely as an intermediary to process packets of information between chains. The computing load to connect and serve information is comparable to a modern day web server rather than a standard blockchain miner\cite{bigchaindb}. Blockchain application providers expose a single public entry point onto the IPFS and distributed computing cluster for incoming transactions, and connect to the public Ledger node for outgoing transactions.
+A main value add of the Lamden Ledger is the absence of transaction fees. In exchange for the benefits of connection to the Lamden Hub and exposing a private chain to the wider community which increases public adoption, a private chain dedicates a certain amount of computing power to the ledger overall. Because the ledger is absent of difficult hashing functions, and serves merely as an intermediary to process packets of information between chains. The computing load to connect and serve information is comparable to a modern day web server rather than a standard blockchain miner\cite{bigchaindb}. Blockchain application providers expose a single public entry point onto the IPFS and distributed computing cluster for incoming transactions, and connect to the public Ledger node for outgoing transactions.
 
 \begin{center}
 \textbf{Payment Channels for Cross-Chain Transactions}
 \end{center}
 
-While retaining a trustless and decentralized system, it is required for a system of cross-chain payments to exist so that blockchain applications can interact with each other freely. This is the main draw of the Hadron Ledger. To do so, the Ledger implements Lightning Network\cite{lightning} inspired payment channels to provide a secure and decentralized method of exchanging funds across blockchains. Transactions initiate from private chains, and utilize the Ledger as a public service for managing secure and guaranteed remittance of funds from chain to chain.
+While retaining a trustless and decentralized system, it is required for a system of cross-chain payments to exist so that blockchain applications can interact with each other freely. This is the main draw of the Lamden Ledger. To do so, the Ledger implements Lightning Network\cite{lightning} inspired payment channels to provide a secure and decentralized method of exchanging funds across blockchains. Transactions initiate from private chains, and utilize the Ledger as a public service for managing secure and guaranteed remittance of funds from chain to chain.
 
 The Ledger is a public service that distributes the work of smart contract deployment and identity verification for chain to chain transfers between participants connected to the main network. Private chains are free to implement their own methods by which to transfer funds to each other, but the public Ledger is verifiable by consensus of participants on the wider network\cite{raftconsensus}, thus providing a stronger sense of trust to cross chain transactions.
 
-Payment channels are represented in pure Solidity smart contract code that run on each private blockchain. When a user wants to initiate a swap, they send a request both the Hadron Ledger service and the chain they want to swap with outlining the terms of their expected transfer. The request is comprised of the sender and receiver address on both chains, as well as the value of the asset being swapped. For example, a payload would look like this:
+Payment channels are represented in pure Solidity smart contract code that run on each private blockchain. When a user wants to initiate a swap, they send a request both the Lamden Ledger service and the chain they want to swap with outlining the terms of their expected transfer. The request is comprised of the sender and receiver address on both chains, as well as the value of the asset being swapped. For example, a payload would look like this:
 
 \begin{lstlisting}[
 	belowskip=1mm,
@@ -374,19 +374,19 @@ To make sure that the payments have been sent through in a timely fashion, each 
 \end{figure}
 
 \section{Example Workflow}
-Firstly, you will install the Hadron Wrapper tool designed for developing blockchains. You will run ‘\texttt{hadron init}' inside of a project directory and generate a chain. From there, you'll install the packages you need for your application using the Hadron Hub, or our package manager named ‘texttt{flora}.' Let's say you want to add a new ERC20 asset. Run ‘\texttt{flora install erc20}' inside of the project directory, and a new token will be generated. To deploy the contracts to the chain, run ‘\texttt{hadron start}', and then ‘\texttt{hadron deploy all}'.
+Firstly, you will install the Lamden Wrapper tool designed for developing blockchains. You will run ‘\texttt{Lamden init}' inside of a project directory and generate a chain. From there, you'll install the packages you need for your application using the Lamden Hub, or our package manager named ‘texttt{flora}.' Let's say you want to add a new ERC20 asset. Run ‘\texttt{flora install erc20}' inside of the project directory, and a new token will be generated. To deploy the contracts to the chain, run ‘\texttt{Lamden start}', and then ‘\texttt{Lamden deploy all}'.
 
 From there, you can access the administrative dashboard if you want to graphically interact with your blockchain. You can install packages from here, add accounts, see transactions, etc. etc. much like Etherscan or another block explorer software. You will also have Remix and other smart contract development tools here as well.
 
-From this backend, you can upload new contracts that you develop to the Hadron Hub. You can also connect your chain to the Hadron Ledger to interact with other blockchain applications. To do this, you will host an IPFS node and connect to the distributed computing cluster as a server. You can then interact with other independant blockchains as a user, or to intiate chain-to-chain swaps. You can initiate swaps with the native Boson token out of the box with all blockchains.
+From this backend, you can upload new contracts that you develop to the Lamden Hub. You can also connect your chain to the Lamden Ledger to interact with other blockchain applications. To do this, you will host an IPFS node and connect to the distributed computing cluster as a server. You can then interact with other independant blockchains as a user, or to intiate chain-to-chain swaps. You can initiate swaps with the native Boson token out of the box with all blockchains.
 
-Now, you can integrate your other software on top of the blockchain such as a public facing user interface, automatic transfers between chains, smart contract interaction, and even interacting with custom contracts that you deploy on other chains on the Hadron Ledger. All is possible with the Hadron Project.
+Now, you can integrate your other software on top of the blockchain such as a public facing user interface, automatic transfers between chains, smart contract interaction, and even interacting with custom contracts that you deploy on other chains on the Lamden Ledger. All is possible with the Lamden Project.
 
 \begin{center}
 \textbf{Maintaining Distributed and Trustless System Architecture}
 \end{center}
 
-While private chains on Hadron are built off of Ethereum which is a distributed and trustless protocol, the rest of the Hadron systems could be developed using standard centralized server-client architecture. However, while this is potentially an easier method of execution, standard HTTP protocol is vulnerable to DDOS attacks, server failure, and centralized ownership of data that sacrifices the rights of the collaborators of the project\cite{symantecreport}.
+While private chains on Lamden are built off of Ethereum which is a distributed and trustless protocol, the rest of the Lamden systems could be developed using standard centralized server-client architecture. However, while this is potentially an easier method of execution, standard HTTP protocol is vulnerable to DDOS attacks, server failure, and centralized ownership of data that sacrifices the rights of the collaborators of the project\cite{symantecreport}.
 
 Thus, the project will be deployed upon the IPFS protocol to establish a true peer to peer system that is distributed and trustless.
 
@@ -394,23 +394,23 @@ Thus, the project will be deployed upon the IPFS protocol to establish a true pe
 \textbf{Bosons, an agnostic digital currency}
 \end{center}
 
-While payment channels across private chains will help facilitate app-to-app communication, there should also be away for users who are involved in the Hadron project apart from a chain host or developer to easily participate and use the blockchain applications on the Hadron Hub. Thus, we propose an agnostic unit of currency known as a ‘Boson’. Bosons are a digital currency that serve the universal asset of the platform itself, available for trade by users of the system who want to use a currency that use all private chains. Communication with the Boson chain comes out of the box for Hadron developers, so they do not have to form independent relationships with other private chains to start transferring assets to one another. In this fashion, developers can start to integrate a digital currency market and trade into their blockchain applications immediately. By offering a native digital currency out of the box to all Hadron users, Bosons increase the adoption rate of private chains, as more individuals are able to participate with the application coming from the Hadron community.
+While payment channels across private chains will help facilitate app-to-app communication, there should also be away for users who are involved in the Lamden project apart from a chain host or developer to easily participate and use the blockchain applications on the Lamden Hub. Thus, we propose an agnostic unit of currency known as a ‘Boson’. Bosons are a digital currency that serve the universal asset of the platform itself, available for trade by users of the system who want to use a currency that use all private chains. Communication with the Boson chain comes out of the box for Lamden developers, so they do not have to form independent relationships with other private chains to start transferring assets to one another. In this fashion, developers can start to integrate a digital currency market and trade into their blockchain applications immediately. By offering a native digital currency out of the box to all Lamden users, Bosons increase the adoption rate of private chains, as more individuals are able to participate with the application coming from the Lamden community.
 
 \begin{center}
 \textbf{Token Sale (Token Scattering Event)}
 \end{center}
 
-The Hadron project will be funded by a Token Distribution Event (Token Scattering) of the Bosons. These Bosons will be available for purchase on the Ethereum main chain in the form of an ERC20 token. Said Bosons will then be available for swapping onto the Hadron chain during a ceremonious process which signifies the milestone achievement of chain-to-chain communication on the Hadron Ledger.
+The Lamden project will be funded by a Token Distribution Event (Token Scattering) of the Bosons. These Bosons will be available for purchase on the Ethereum main chain in the form of an ERC20 token. Said Bosons will then be available for swapping onto the Lamden chain during a ceremonious process which signifies the milestone achievement of chain-to-chain communication on the Lamden Ledger.
 
 Further detailing on the Token Scattering Event is included in organizational documents.
 
 \section{Conclusion}
 
-The goal of the Hadron project is to provide a suite of tools that makes the rapid development and deployment of blockchains easy for the general population of developers. By modelling our tools based on the most popular tools used by developers today, we can capture a large and enthusiastic base of developers who want to get involved in blockchain but are unable to get over the initial hurdles.
+The goal of the Lamden project is to provide a suite of tools that makes the rapid development and deployment of blockchains easy for the general population of developers. By modelling our tools based on the most popular tools used by developers today, we can capture a large and enthusiastic base of developers who want to get involved in blockchain but are unable to get over the initial hurdles.
 
 Furthermore, by providing a centralized community, innovation can prosper and build upon itself, leading to newer and greater technologies and accelerating the industry as a whole.
 
-Lastly, through the Hadron Ledger, we are able to connect all of these projects together on a single routing system that facilitates swap transactions so that private chains can retain the benefits of self-management and still take advantage of a larger ecosystem of great applications.
+Lastly, through the Lamden Ledger, we are able to connect all of these projects together on a single routing system that facilitates swap transactions so that private chains can retain the benefits of self-management and still take advantage of a larger ecosystem of great applications.
 
 
 \bibliography{references}{}
