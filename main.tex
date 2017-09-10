@@ -44,10 +44,10 @@
 \renewcommand\lstlistingname{Algorithm}
 
 \title{Lamden: a framework for the rapid development\\and deployment of blockchain technologies.}
-\author{Stuart Farmer\thanks{stuart@lamden.io}}
-\author{Mario Hernandez\thanks{mario@lamden.io}}
-\author{James Munsch\thanks{james@lamden.io}}
-\affil{The Lamden Project, White Paper version 0.1.2}
+\author{Stuart Farmer\thanks{stu@lamden.com}}
+\author{Mario Hernandez\thanks{mario@lamden.com}}
+\author{James Munsch\thanks{james@lamden.com}}
+\affil{The Lamden Project, White Paper version 0.2.0}
 
 \begin{document}
 \sloppy
@@ -150,7 +150,7 @@ For many interested in blockchain technologies for their enterprises or business
 
 The Lamden Project proposes the creation of a suite of development tools that allows rapid development and deployment of private blockchain systems that mimics the modern development process featured in such tech stacks as Node.js or Python which provide a plethora of easy to use tools, extensive and robust documentation, and vastly popular support communities.
 
-The project is broken up into three sections, Saffron, Flora, and Clove, which each add a layer to end goal of providing hyperfast blockchains for developer to test, experiment, and deploy across a network of other blockchain systems.
+The project is broken up into three sections, Saffron, Flora, and Clove, which each add a layer towards the end goal of providing hyperfast blockchains for developer to test, experiment, and deploy across a network of other blockchain systems.
 
 Saffron is the generator tool to deploy private chains on an internal network without any hassle. Flora is a central repository for smart contract packages and templates, private chain naming services, and blockchain discovery. Clove is the network that handles payment channel swap processes between chains and facilitates communication between blockchain apps on the network in a way that remains trustless and decentralized.
 
@@ -166,7 +166,7 @@ Instead of having a single mainnet which suffers from the problems mentioned abo
 
 What makes blockchain technology work is the fact that miners are independent actors that verify transactions that occur so it is near impossible to inject false information into the chain. However, in traditional settings, miners are rewarded in cryptocurrency from transaction fees. Because transactions are free on the Lamden protocol, a different rewarding mechanism must be instilled so that miners are still motivated to provide independent verification of transactions\cite{verifincent}.
 
-It is possible to create proof-of-work, proof-of-stake, and any other rewarding schemes by using smart contracts. In this way, a smart contract can be called upon to calculate the reward and recipient, and reward any type of asset on the chain. Instead of just the native currency of the chain (which is initially Ether), ERC20 tokens or novel cryptoasset implementations can be rewarded as well, providing even more customization to private chains. And because transactions and gas is free on the networks, calling a contract one a block, for example, is not expensive.
+It is possible to create proof-of-work, proof-of-stake, and any other rewarding schemes by using smart contracts. In this way, a smart contract can be called upon to calculate the reward and recipient, and reward any type of asset on the chain. Instead of just the native currency of the chain (which is initially Ether), ERC20 tokens or novel cryptoasset implementations can be rewarded as well, providing even more customization to private chains. And because transactions and gas is free on the networks, calling a contract once a block, for example, is not expensive.
 
 \begin{lstlisting}[
 	belowskip=1mm,
@@ -208,9 +208,7 @@ By abstracting the main interaction components away from \texttt{geth} into a CL
 
 Furthermore, Saffron will provide a local server with an Ethereum blockchain explorer that can be public facing so that the wider community can monitor and see the activity occurring on the chain.
 
-A web service to manage the chain from a graphical web interface similar to Parse will also be included out of the box.
-
-Optionally deployable instances of IPFS\,/\,IPNS and Tor.
+A web service to manage the chain from a graphical web interface similar to Parse will also be included out of the box. Finally, the stack will incorporate optionally deployable instances of IPFS\,/\,IPNS and Tor.
 
 \begin{center}
 \textbf{Deployment}
@@ -224,7 +222,7 @@ After the development of a private chain, an organization will want to package a
 
 Beyond creating a private chain instance, Saffron contains the necessary methods needed to accept payment channel transactions and interact with the larger Lamden chain. Thus, Saffron should be thought of as a type of interface. Each Lamden Wrapper instance must adequately conform to a set of monitoring and interaction protocols to guarantee that the chain is trustless and that transactions can be independently confirmed.
 
-If Saffron component can achieve these functionalities, then the internal blockchain driver does not have to be based off of Ethereum. Into the future, Saffron will support arbitrary blockchain technologies such as Bitcoin, Litecoin, Zcash, Monero, Neo, Tezos, Eos, and more as long as they can support payment channels in a trustless fashion. Even novel blockchain technologies that adhere to the wrapper protocol will be supported, creating a completely custom blockchain-to-blockchain interfacing network.
+If Saffron can achieve these functionalities, then the internal blockchain driver does not have to be based off of Ethereum. Into the future, Saffron will support arbitrary blockchain technologies such as Bitcoin, Litecoin, Zcash, Monero, Neo, Tezos, Eos, and more as long as they can support payment channels in a trustless fashion. Even novel blockchain technologies that adhere to the wrapper protocol will be supported, creating a completely custom blockchain-to-blockchain interfacing network.
 
 The Wrapper will ultimately support any blockchain technology as long as it adheres to certain specifications so that it can interact with Clove. This future-proofs the Lamden system so that no matter what technologies exist in the future, there will always be a network to interact with them. This also solves the problem of blockchain migration, as businesses, enterprises, and applications can upgrade to the latest blockchain projects and technology as they come out to keep ahead of the competition.
 
@@ -374,11 +372,11 @@ To make sure that the payments have been sent through in a timely fashion, each 
 \end{figure}
 
 \section{Example Workflow}
-Firstly, you will install Saffron tool designed for developing blockchains. You will run ‘\texttt{saffron init}' inside of a project directory and generate a chain. From there, you'll install the packages you need for your application using Flora, or our package manager named ‘texttt{flora}.' Let's say you want to add a new ERC20 asset. Run ‘\texttt{flora install erc20}' inside of the project directory, and a new token will be generated. To deploy the contracts to the chain, run ‘\texttt{saffron start}', and then ‘\texttt{saffron deploy all}'.
+Firstly, you will install Saffron tool designed for developing blockchains. You will run ‘\texttt{saffron init}' inside of a project directory and generate a chain. From there, you'll install the packages you need for your application using Flora, our package manager. Let's say you want to add a new ERC20 asset. Run ‘\texttt{flora install erc20}' inside of the project directory, and a new token will be generated. To deploy the contracts to the chain, run ‘\texttt{saffron start}', and then ‘\texttt{saffron deploy all}'.
 
-From there, you can access the administrative dashboard if you want to graphically interact with your blockchain. You can install packages from here, add accounts, see transactions, etc. etc. much like Etherscan or another block explorer software. You will also have Remix and other smart contract development tools here as well.
+From there, you can access the administrative dashboard if you want to graphically interact with your blockchain. You can install packages from here, add accounts, see transactions, etc. much like Etherscan or another block explorer software. You will also have Remix and other smart contract development tools here as well.
 
-From this backend, you can upload new contracts that you develop to Flora. You can also connect your chain to Clove to interact with other blockchain applications. To do this, you will host an IPFS node and connect to the distributed computing cluster as a server. You can then interact with other independant blockchains as a user, or to intiate chain-to-chain swaps. You can initiate swaps with the native Boson token out of the box with all blockchains.
+From this backend, you can upload new contracts that you develop to Flora. You can also connect your chain to Clove to interact with other blockchain applications. To do this, you will host an IPFS node and connect to the distributed computing cluster as a server. You can then interact with other independant blockchains as a user, or to intiate chain-to-chain swaps. You can initiate swaps with the native Tau token that comes out-of-the-box with all blockchains.
 
 Now, you can integrate your other software on top of the blockchain such as a public facing user interface, automatic transfers between chains, smart contract interaction, and even interacting with custom contracts that you deploy on other chains on Clove. All is possible with the Lamden Project.
 
@@ -394,7 +392,7 @@ Thus, the project will be deployed upon the IPFS protocol to establish a true pe
 \textbf{Lamden Tau, an agnostic digital asset}
 \end{center}
 
-While payment channels across private chains will help facilitate app-to-app communication, there should also be away for users who are involved in the Lamden Project apart from a chain host or developer to easily participate and use the blockchain applications on Flora. Thus, we propose an agnostic utility asset known as 'Lamden Tau'. Tau are a digital asset that serve the universal asset of the platform itself, available for trade by users of the system who want to use a currency that use all private chains. Communication with the Tau chain comes out of the box for Lamden developers, so they do not have to form independent relationships with other private chains to start transferring assets to one another. In this fashion, developers can start to integrate a digital currency market and trade into their blockchain applications immediately. By offering a native digital currency out of the box to all Lamden users, Tau increase the adoption rate of private chains, as more individuals are able to participate with the application coming from the Lamden community.
+While payment channels across private chains will help facilitate app-to-app communication, there should also be away for users who are involved in the Lamden Project apart from a chain host or developer to easily participate and use the blockchain applications on Flora. Thus, we propose an agnostic utility asset known as 'Lamden Tau'. Tau are a digital asset that serve the universal asset of the platform itself, available for trade by users of the system who want to use a currency that use all private chains. Communication with the Tau chain comes out of the box for Lamden users, so they do not have to form independent relationships with other private chains to start transferring assets to one another. In this fashion, developers can start to integrate a digital currency market and trade into their blockchain applications immediately. By offering a native digital currency out of the box to all Lamden users, Tau increase the adoption rate of private chains, as more individuals are able to participate with the application coming from the Lamden community.
 
 \begin{center}
 \textbf{Token Sale (Token Scattering Event)}
@@ -408,7 +406,7 @@ Further detailing on the Token Scattering Event is included in organizational do
 
 The goal of the Lamden Project is to provide a suite of tools that makes the rapid development and deployment of blockchains easy for the general population of developers. By modelling our tools based on the most popular tools used by developers today, we can capture a large and enthusiastic base of developers who want to get involved in blockchain but are unable to get over the initial hurdles.
 
-Furthermore, by providing a centralized community, innovation can prosper and build upon itself, leading to newer and greater technologies and accelerating the industry as a whole.
+Furthermore, by providing a centralized community, innovation can prosper and build upon itself, leading to newer and greater technologies, accelerating the industry as a whole.
 
 Lastly, through Clove, we are able to connect all of these projects together on a single routing system that facilitates swap transactions so that private chains can retain the benefits of self-management and still take advantage of a larger ecosystem of great applications.
 
